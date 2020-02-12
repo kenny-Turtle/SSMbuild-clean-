@@ -3,6 +3,8 @@
 <html>
 <head>
   <title>首页</title>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
   <style type="text/css">
     a {
       text-decoration: none;
@@ -23,6 +25,10 @@
 <body>
 <h3>
   <a href="${pageContext.request.contextPath}/book/allBook">点击进入列表页</a>
+
+</h3>
+<h3>
+<a href="${pageContext.request.contextPath}/user/toLogin">点击进入登录页</a>
 </h3>
 </body>
 </html>

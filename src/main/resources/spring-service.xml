@@ -15,9 +15,9 @@
 
     <context:component-scan base-package="com.zfj.service"/>
 
-    <bean id="BookServiceImpl" class="com.zfj.service.BookServiceImpl">
+    <!--<bean id="BookServiceImpl" class="com.zfj.service.BookServiceImpl">
         <property name="bookMapper" ref="bookMapper"/>
-    </bean>
+    </bean>-->
 
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="dataSource"/>

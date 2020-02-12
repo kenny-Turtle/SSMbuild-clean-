@@ -2,6 +2,8 @@ package com.zfj.service;
 
 import com.zfj.dao.BookMapper;
 import com.zfj.pojo.Books;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -9,8 +11,10 @@ import java.util.List;
  * @Author zfj
  * @create 2019/12/2 22:16
  */
+@Service
 public class BookServiceImpl implements BookService {
 
+    @Autowired
     private BookMapper bookMapper;
 
     public void setBookMapper(BookMapper bookMapper) {

@@ -1137,7 +1137,11 @@
     <table id="287" parent="11" name="books">
       <Collation>utf8_general_ci</Collation>
     </table>
-    <column id="288" parent="287" name="bookID">
+    <table id="288" parent="11" name="user"/>
+    <table id="289" parent="11" name="user1">
+      <Collation>utf8_general_ci</Collation>
+    </table>
+    <column id="290" parent="287" name="bookID">
       <Position>1</Position>
       <Comment>书ID</Comment>
       <DataType>int(10)|0s</DataType>
@@ -1145,30 +1149,112 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="289" parent="287" name="bookName">
+    <column id="291" parent="287" name="bookName">
       <Position>2</Position>
       <Comment>书名</Comment>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="290" parent="287" name="bookCounts">
+    <column id="292" parent="287" name="bookCounts">
       <Position>3</Position>
       <DataType>int(100)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="291" parent="287" name="detail">
+    <column id="293" parent="287" name="detail">
       <Position>4</Position>
       <Comment>描述</Comment>
       <DataType>varchar(200)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="292" parent="287" name="PRIMARY">
+    <key id="294" parent="287" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>bookID</ColNames>
       <Primary>1</Primary>
+    </key>
+    <column id="295" parent="288" name="username">
+      <Position>1</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="296" parent="288" name="password">
+      <Position>2</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="297" parent="288" name="user_username_uindex">
+      <ColNames>username</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <key id="298" parent="288" name="user_username_uindex">
+      <ColNames>username</ColNames>
+      <UnderlyingIndexName>user_username_uindex</UnderlyingIndexName>
+    </key>
+    <column id="299" parent="289" name="id">
+      <Position>1</Position>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="300" parent="289" name="username">
+      <Position>2</Position>
+      <Comment>编号</Comment>
+      <DataType>varchar(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="301" parent="289" name="age">
+      <Position>3</Position>
+      <Comment>年龄</Comment>
+      <DataType>tinyint(3) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>18</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="302" parent="289" name="sex">
+      <Position>4</Position>
+      <DataType>varchar(10)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="303" parent="289" name="addr">
+      <Position>5</Position>
+      <DataType>varchar(30)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="304" parent="289" name="married">
+      <Position>6</Position>
+      <DataType>tinyint(1)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="305" parent="289" name="salary">
+      <Position>7</Position>
+      <Comment>薪水</Comment>
+      <DataType>float(8,2 digit)|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>0.00</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="306" parent="289" name="username">
+      <ColNames>username</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <key id="307" parent="289" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="308" parent="289" name="username">
+      <ColNames>username</ColNames>
+      <UnderlyingIndexName>username</UnderlyingIndexName>
     </key>
   </database-model>
 </dataSource>

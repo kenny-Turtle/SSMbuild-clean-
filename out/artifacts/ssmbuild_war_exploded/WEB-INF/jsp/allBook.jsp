@@ -13,12 +13,18 @@
 
     <div class="row clearfix">
         <div class="col-md-12 column">
-            <div class="page-header">
+            <div class="page-header" style="float:left">
                 <h1>
                     <small>书籍列表------显示所有书籍</small>
                 </h1>
             </div>
+            <div style="float:right">
+                <h5>
+                    <span>欢迎您：${loginedname}</span>
+                </h5>
+            </div>
         </div>
+
 
         <div class="row">
             <div class="col-md-4 column">
@@ -28,7 +34,7 @@
             <div class="col-md-4 column"></div>
             <div class="col-md-4 column">
                 <%--查询书籍--%>
-                <form class="form-inline" action="${pageContext.request.contextPath}/book/queryBookName" method="post" style="float: right">
+                <form class="form-inline " action="${pageContext.request.contextPath}/book/queryBookName" method="post" style="float: right">
                     <span style="color:red;font-weight:bold">${error}</span>
                     <input type="text" placeholder="请输入要查询的书籍名称" class="form-control" name="queryBookName">
                     <input type="submit" value="查询" class="btn btn-primary">
